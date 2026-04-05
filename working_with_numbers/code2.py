@@ -96,3 +96,15 @@ print(isinstance(cmp, complex))
 st = 'hari'
 print(isinstance(st, str))
 # ======================================
+
+
+# challenge ::
+# generate integer number and check even or odd
+
+x = random.randint(1,100)
+if x % 2 == 0:
+    print(x,'is even')
+elif x % 2 != 0:
+    print(x,'is odd')
+else:
+    print(x,'is zero')
