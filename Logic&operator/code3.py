@@ -96,4 +96,90 @@ else:
     print('<< invalid >>>')
 
 
+print('*'*100)
+
+score = random.randint(80,100)
+is_project_submitted = True
+print(score)
+
+if score >= 90 and is_project_submitted :
+    print('Grade - A+')
+elif score >= 90 :
+    print('Grade - A')
+elif score >= 80 :
+    print('Grade - B')
+elif score >= 70 :
+    print('Grade - C')
+elif score >= 60 :
+    print('Grade - D')
+else:
+    print('Grade - E')
+print('*'*100)
+
+
+
+
+# independent if stmts
+print(score)
+if score >= 90 :
+    print('high score')
+else:
+    print('low score')
+
+if is_project_submitted :
+    print('Project submitted')
+else:
+    print('Project not submitted')
+
+
+
+# inline if stmt / ternary
+# score = 90
+print(score)
+# if score >= 90:
+#     print('<<< PASS >>>')
+# else:
+#     print('<<< FAIL >>>')
+
+# print("<< PASS >>" if score >=90 else '<< FAIL >>>' )
+
+print("<< Topper >>" if score >=90 else "<< PASS >>"if score >=80 and score<90 else '<< FAIL >>>' )
+
+print('*'*100)
+
+
+# MATCH CASE
+# COUNTRY = ['andhra','kerala','karnataka','telangana']
+# print("<<< MATCH >>>")
+# state = input('enter your state :: ')
+
+# match state:
+#     case "andhra" :
+#         print('AP')
+#     case "telangana" :
+#         print('TS')
+#     case "karnataka":
+#         print('KA')
+#     case "tamilnadu" :
+#         print('TA')
+#     case _:
+#         print('Error')
+
+
+
+
+# CH-1
+"""Validate the Quality and Correctness of Email Values
+- Must not be empty
+- Must contain ''and'@'
+- Must contain exactly one '@' symbol
+- Must end with'.com', org', or'net'
+- Must not be longer than 254 characters
+- Must start and end with a letter or digit"""
+
+email = 'dfg@gmail.com1'
+
+if len(email)>0  and '.' in email and '@' in email:
+    if email.count('@')== 1 and (email.endswith(('.com','.net','.org')) and len(email)<=254 and email[0].isalnum() and email[-1].isalnum()):
+        print('Email is valid')
 
