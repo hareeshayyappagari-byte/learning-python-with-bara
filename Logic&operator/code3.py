@@ -46,7 +46,7 @@ print(user and pwd)
 
 
 
-# chellange ::
+# chelange ::
 # 1Check if a user's name is not empty and the age is greater than or equal to 18
 # 2 - Check if the password is at least 8 characters long and does not contain spaces
 # 3 - Check if a user's email is not empty, contains '@', and ends with com
@@ -96,4 +96,159 @@ else:
     print('<< invalid >>>')
 
 
+print('*'*100)
 
+score = random.randint(80,100)
+is_project_submitted = True
+print(score)
+
+if score >= 90 and is_project_submitted :
+    print('Grade - A+')
+elif score >= 90 :
+    print('Grade - A')
+elif score >= 80 :
+    print('Grade - B')
+elif score >= 70 :
+    print('Grade - C')
+elif score >= 60 :
+    print('Grade - D')
+else:
+    print('Grade - E')
+print('*'*100)
+
+
+
+
+# independent if stmts
+print(score)
+if score >= 90 :
+    print('high score')
+else:
+    print('low score')
+
+if is_project_submitted :
+    print('Project submitted')
+else:
+    print('Project not submitted')
+
+
+
+# inline if stmt / ternary
+# score = 90
+print(score)
+# if score >= 90:
+#     print('<<< PASS >>>')
+# else:
+#     print('<<< FAIL >>>')
+
+# print("<< PASS >>" if score >=90 else '<< FAIL >>>' )
+
+print("<< Topper >>" if score >=90 else "<< PASS >>"if score >=80 and score<90 else '<< FAIL >>>' )
+
+print('*'*100)
+
+
+# MATCH CASE
+# COUNTRY = ['andhra','kerala','karnataka','telangana']
+# print("<<< MATCH >>>")
+# state = input('enter your state :: ')
+
+# match state:
+#     case "andhra" :
+#         print('AP')
+#     case "telangana" :
+#         print('TS')
+#     case "karnataka":
+#         print('KA')
+#     case "tamilnadu" :
+#         print('TA')
+#     case _:
+#         print('Error')
+
+
+
+
+# CH-1
+"""Validate the Quality and Correctness of Email Values
+- Must not be empty
+- Must contain ''and'@'
+- Must contain exactly one '@' symbol
+- Must end with'.com', org', or'net'
+- Must not be longer than 254 characters
+- Must start and end with a letter or digit"""
+
+email = 'dfg@gmail.com1'
+
+if len(email)>0  and '.' in email and '@' in email:
+    if email.count('@')== 1 and (email.endswith(('.com','.net','.org')) and len(email)<=254 and email[0].isalnum() and email[-1].isalnum()):
+        print('Email is valid')
+
+
+
+# Validate the Quality and Correctness of Email Values
+# - Must not be empty
+# - Must contain '.'and'@'
+# - Must contain exactly one '@' symbol
+# - Must end with'.com','.org', or,'.net'
+# - Must not be longer than 254 characters
+# - Must start and end with a letter or digit
+#
+
+# print('*'*100)
+#
+# email = " h@gmail.com"
+# # cleaning the input string
+# v_email = email.strip()
+# print(v_email)
+#
+# # - Must not be empty
+# if v_email == "":
+#     print('Email not be empty ....')
+# # - Must contain '.'and'@'
+# elif not('.' in v_email and '@' in v_email):
+#     print('Email must contain . and @')
+# # - Must contain exactly one '@' symbol
+# elif not v_email.count('@')== 1:
+#     print('Email contain only one @')
+# # - Must end with'.com','.org', or,'.net'
+# elif not v_email.endswith(('.com','.net','.org')):
+#     print('Email must end with .com or .net')
+# # - Must not be longer than 254 characters
+# elif len(v_email) >= 254:
+#     print('Email must contain exactly 254 characters')
+# elif v_email[0].isalnum() and v_email[-1].isalnum():
+#     print('Email starts and ends with number or letter..')
+# else:
+#     print('Email is valid')
+
+print('*'*100)
+# CH-2
+# VALIDATE THE QUALITY AND CORRECTNESS OF THE PWD
+email = 'hareesh@gmail.com'
+pwd = 'asdfghwertyA'
+# must not be empty
+# must be at lest 8 chars
+# must include at lest 1 upper case nd 1 lowercase
+# must not be same as the email
+# not contain any spaces
+# must start and ends with a latter or digit
+
+v_pwd = pwd.strip()
+print(v_pwd)
+if v_pwd == '':
+    print('Password cannot be empty...')
+elif len(v_pwd) < 8:
+    print('Password must be at least 8 characters...')
+elif v_pwd == email:
+    print('Password and email do not be same...')
+elif ' ' in v_pwd:
+    print('Password cannot contain spaces...')
+elif not v_pwd[0].isalnum() and v_pwd[-1].isalnum():
+    print('Password starts and ends with digit or letter...')
+# must include at lest 1 upper case nd 1 lowercase
+has_upper = any(i.isupper() for i in v_pwd)
+has_lower = any(j.islower() for j in v_pwd)
+if not (has_upper and has_lower):
+    print('Password can contain upper and lower characters...')
+else:
+    print('Password valid ..')
